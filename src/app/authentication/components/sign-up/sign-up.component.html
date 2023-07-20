@@ -1,0 +1,118 @@
+<div class="SignUpBox">
+    <div class="innerSignUpBox">
+        <form  [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <mat-card>
+            <mat-card-content>
+                <h1 class="heading1" >Join Us</h1>
+                <p>
+                    <mat-form-field class="common" appearance="fill">
+                        <mat-label>First Name</mat-label>
+                        <input formControlName="FirstName" matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>hint</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field class="common"appearance="fill">
+                        <mat-label>Last Name</mat-label>
+                        <input formControlName="LastName" matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                </p>
+
+                <div class="example-container">
+                    
+                    <mat-form-field class="common"appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input formControlName="Email" matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                    
+
+                    <mat-form-field class="common">
+                        <mat-label>Choose a date</mat-label>
+                        <input formControlName="Dob" matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+                </div>
+
+                <mat-form-field class="common">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput formControlName="Password" [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <mat-form-field class="common" appearance="fill">
+                    <mat-label>Contact Number</mat-label>
+                    <input formControlName="Contact" matInput placeholder="Placeholder" [type]="'number'">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+
+                <p>
+                    <mat-form-field  class="common" appearance="fill">
+                        <mat-label>AddressLine 1</mat-label>
+                        <input formControlName="AddressLine1" matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>hint</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field class="common" appearance="fill">
+                        <mat-label>AddressLine 2</mat-label>
+                        <input formControlName="AddressLine2" matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field  class="common" appearance="fill">
+                        <mat-label>current city</mat-label>
+                        <input formControlName="City" matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>hint</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field  class="common" appearance="fill">
+                        <mat-label>current state</mat-label>
+                        <input formControlName="State" matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field  class="common" appearance="fill">
+                        <mat-label>Permanent city</mat-label>
+                        <input  formControlName="PermanentCity" matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>hint</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field class="common" appearance="fill">
+                        <mat-label>Permanent state</mat-label>
+                        <input formControlName="PermanentState" matInput placeholder="Placeholder">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                </p>
+
+
+            </mat-card-content>
+            <button class="btn" mat-raised-button color="primary">SignUp</button>
+        </mat-card>
+</form>
+       
+    </div>
+
+    <div> Already have an account?
+
+        <button  mat-button color="primary">Login</button>
+    </div>
+
+{{signUpForm.value | json}}
+</div>

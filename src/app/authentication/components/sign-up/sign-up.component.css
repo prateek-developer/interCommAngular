@@ -1,0 +1,26 @@
+.SignUpBox{
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    align-items: center;
+     
+    
+  }
+
+  .innerSignUpBox{
+    margin: 10px;
+   
+  
+}
+
+.common{
+    padding: 10px;
+}
+
+.heading1{
+    text-align: center;
+    text-decoration: solid;
+    font-weight: bold;
+}
+

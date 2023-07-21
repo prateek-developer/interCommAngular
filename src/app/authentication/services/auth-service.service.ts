@@ -9,7 +9,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 export class AuthServiceService {
 
 
-  _url = 'https://localhost:44318/api/User/SignUP';
+  _url = `https://localhost:44318/api/User/SignUP`;
   _LoginUrl='https://localhost:44318/api/Login/authenticate';
 
   constructor(private _http: HttpClient , private router :Router) { }

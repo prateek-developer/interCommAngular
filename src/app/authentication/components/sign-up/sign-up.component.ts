@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators  ,FormBuilder } from '@angular/forms';
 import { AuthServiceService } from '../../services/auth-service.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -21,7 +22,7 @@ export class SignUpComponent implements OnInit {
 
 
   
-  constructor(private fb : FormBuilder  , private _authservice :AuthServiceService){}
+  constructor(private fb : FormBuilder  , private _authservice :AuthServiceService , private router :Router ){}
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -55,6 +56,8 @@ export class SignUpComponent implements OnInit {
       );
     }
  
-
+    login(){
+      this.router.navigate(['/login'])
+    }
 
 }

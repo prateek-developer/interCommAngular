@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatCardModule} from '@angular/material/card';
     AuthenticationModule,
     BrowserAnimationsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
 
   ],
   providers: [],

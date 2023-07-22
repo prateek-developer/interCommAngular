@@ -1,0 +1,29 @@
+<div class="addGroupBox1">
+    <div class="box2">
+        <form [formGroup]="AddGroup">
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Group Name</label>
+                <input formControlName="GroupName" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+              </div>
+              
+              <label for="formGroupExampleInput" class="form-label">Group Type</label>
+              <div class="form-check">
+                <input formControlName="GroupType" value="0" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                Public
+                </label>
+              </div>
+              <div class="form-check">
+                <input formControlName="GroupType" value="1" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                Private
+                </label>
+              </div>
+
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Group Discription</label>
+                <input  formControlName="GroupDescription" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+</div>
